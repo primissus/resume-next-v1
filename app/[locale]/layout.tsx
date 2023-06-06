@@ -1,6 +1,4 @@
 import './globals.css';
-import { useRouter } from 'next/router';
-import { } from '@/src/hooks/useLocale';
 
 export const metadata = {
     title: 'Manuel Ruiz',
@@ -9,16 +7,13 @@ export const metadata = {
 
 export default function RootLayout({
     children,
+    params: { locale },
 }: {
     children: React.ReactNode,
+    params: { locale: string },
 }) {
-    const router = useRouter();
-    const { locale } = router.query;
-
-    console.log('locale', locale);
-
     return (
-        <html lang="en">
+        <html lang={locale}>
             <body>
                 {children}
             </body>

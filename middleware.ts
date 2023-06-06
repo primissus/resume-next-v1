@@ -22,6 +22,7 @@ export function middleware(request: NextRequest) {
     const pathname = request.nextUrl.pathname;
     const locale = getLocaleFrom(pathname);
 
+    console.log('middleware locale', locale);
     if (locale === defaultLocale) {
         return NextResponse.redirect(
             new URL(
@@ -38,27 +39,27 @@ export function middleware(request: NextRequest) {
         return !pathname.startsWith(`/${locale}`);
     });
 
+    console.log('pathnameIsMissingValidLocale', pathnameIsMissingValidLocale);
     if (pathnameIsMissingValidLocale) {
         const matchedLocale = findBestMatchingLocale(
             request.headers.get('Accept-Language') || defaultLocale
         );
 
         if (matchedLocale !== defaultLocale) {
-           return NextResponse.redirect(
-               new URL(
-                   `${matchedLocale}${pathname}`,
-                   request.nextUrl.origin,
-               ),
+            return NextResponse.redirect(
+                new URL(
+                    `${matchedLocale}${pathname}`,
+                    request.nextUrl.origin,
+                ),
             );
         }
+        return NextResponse.rewrite(
+            new URL(
+                `/${defaultLocale}${pathname}`,
+                request.nextUrl.origin,
+            )
+        );
     }
-
-    return NextResponse.rewrite(
-        new URL(
-            `/${defaultLocale}${pathname}`,
-            request.nextUrl.origin,
-        )
-    );
 }
 
 
