@@ -1,4 +1,6 @@
 import './globals.css';
+import { provideLocale } from '@server/hooks/useLocale';
+import { LayoutHeader } from '@components/LayoutHeader';
 
 export const metadata = {
     title: 'Manuel Ruiz',
@@ -12,9 +14,13 @@ export default function RootLayout({
     children: React.ReactNode,
     params: { locale: string },
 }) {
+    provideLocale(locale);
+
     return (
         <html lang={locale}>
+            <head />
             <body>
+                <LayoutHeader />
                 {children}
             </body>
         </html>

@@ -1,4 +1,6 @@
-export default function Home() {
+import Image from 'next/image';
+import profilePicture from '@assets/profile.png';
 
-    return <></>;
+export default function Home() {
+    return <Image src={profilePicture} alt="" />;
 }
