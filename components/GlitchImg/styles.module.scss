@@ -1,0 +1,47 @@
+.imgContainerimgContainer {
+    position: relative;
+}
+
+.imgContainer > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+img.filterImg {
+     clip-path: inset(100% 100% 100% 100%);
+}
+
+.imgContainer img.filterImg:nth-of-type(2) {
+    top: -8px;
+    left: -8px;
+    animation: svg-glitch-effect-1 2s infinite linear alternate-reverse;
+    animation-delay: 3s;
+}
+
+.imgContainer img.filterImg:nth-of-type(3) {
+    top: 8px;
+    left: 8px;
+    animation: svg-glitch-effect-2 2s infinite linear alternate-reverse;
+    animation-delay: 3s;
+}
+
+$steps: 30;
+
+@keyframes svg-glitch-effect-1{
+    @for $i from 0 through $steps{
+        #{percentage($i*(1/$steps))}{
+            //clip: rect(random(75) + px, 270px, random(75) + px, 0);
+            clip-path: inset(percentage(random(90) / 100) percentage(random(90) / 100) percentage(random(90) / 100) percentage(random(90) / 100));
+        }
+    }
+}
+
+@keyframes svg-glitch-effect-2{
+    @for $i from 0 through $steps{
+        #{percentage($i*(1/$steps))}{
+            //clip: rect(random(75) + px, 270px, random(75) + px, 0);
+            clip-path: inset(percentage(random(90) / 100) percentage(random(90) / 100) percentage(random(90) / 100) percentage(random(90) / 100));
+        }
+    }
+}

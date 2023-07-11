@@ -1,0 +1,6 @@
+.tintedImage {
+    filter:
+        brightness(200%)
+        grayscale(100%)
+        opacity(0.2);
+}
