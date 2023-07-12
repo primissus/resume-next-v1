@@ -9,7 +9,7 @@ const GlitchImg = ({ src, className }: any) => {
 
     return (
         <div className={styles.imgContainer}>
-            <Image className={clsx(className, 'grayscale')} src={src} alt="" />
+            <Image className={clsx(className, styles.originalImg, 'grayscale')} src={src} alt="" />
             <TintedImg color="red" className={clsx(className, styles.filterImg)} src={src} alt="" />
             <TintedImg color="blue" className={clsx(className, styles.filterImg)} src={src} alt="" />
         </div>

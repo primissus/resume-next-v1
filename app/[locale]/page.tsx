@@ -17,8 +17,6 @@ function Header() {
 }
 
 export default function Home() {
-    console.log('ImgProfile', ImgProfile);
-
     return (
         <div>
             <Header />
