@@ -8,10 +8,10 @@ import styles from './styles.module.scss';
 const GlitchImg = ({ src, className }: any) => {
 
     return (
-        <div className={styles.imgContainer}>
-            <Image className={clsx(className, styles.originalImg, 'grayscale')} src={src} alt="" />
-            <TintedImg color="red" className={clsx(className, styles.filterImg)} src={src} alt="" />
-            <TintedImg color="blue" className={clsx(className, styles.filterImg)} src={src} alt="" />
+        <div className={clsx(className, styles.imgContainer)}>
+            <Image className={clsx(className, styles.originalImg, styles.singlePath, 'grayscale')} src={src} alt="" />
+            <TintedImg color="#e73396" className={clsx(className, styles.filterImg)} src={src} alt="" />
+            <TintedImg color="#1d8ac9" className={clsx(className, styles.filterImg)} src={src} alt="" />
         </div>
     );
 }

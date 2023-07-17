@@ -18,10 +18,10 @@ function Header() {
 
 export default function Home() {
     return (
-        <div>
+        <div className="bg-slate-950">
             <Header />
 
-            <GlitchImg src={ImgProfile} className="max-w-200-px w-1/2" />
+            <GlitchImg src={ImgProfile} className="max-w-[1000px] w-1/2" />
         </div>
     );
 }

@@ -18,9 +18,7 @@ export default function RootLayout({
 
     return (
         <html lang={locale}>
-            <head />
-            <body>
-                <LayoutHeader />
+            <body className="bg-slate-950">
                 {children}
             </body>
         </html>

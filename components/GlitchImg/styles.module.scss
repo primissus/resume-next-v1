@@ -12,7 +12,7 @@ img.originalImg {
     left: 0;
     top: 0;
 
-    animation: svg-glitch-move-effect 5s infinite linear alternate-reverse;
+    animation: svg-glitch-move-effect 5s infinite step-end alternate-reverse;
 }
 
 img.filterImg {
@@ -20,20 +20,20 @@ img.filterImg {
 }
 
 .imgContainer img.filterImg:nth-of-type(2) {
-    top: -8px;
-    left: -8px;
-    animation: svg-glitch-effect-1 5s infinite linear alternate-reverse;
+    top: -16px;
+    left: -16px;
+    animation: svg-glitch-effect-1 5s infinite step-end alternate-reverse;
 }
 
 .imgContainer img.filterImg:nth-of-type(3) {
-    top: 8px;
-    left: 8px;
-    animation: svg-glitch-effect-2 5s infinite linear alternate-reverse;
+    top: 16px;
+    left: 16px;
+    animation: svg-glitch-effect-2 5s infinite step-end alternate-reverse;
 }
 
-$steps: 33;
-$initPercent: 40;
-$percentOffset: 20;
+$steps: 10;
+$initPercent: 38;
+$percentOffset: 14;
 
 @keyframes svg-glitch-effect-1{
     #{$initPercent - 1}%{
@@ -41,7 +41,8 @@ $percentOffset: 20;
     }
     @for $i from 0 through $steps{
         #{percentage(($initPercent + $i / $steps * $percentOffset) / 100)}{
-            clip-path: inset(percentage(random(80) / 100) percentage(random(80) / 100) percentage(random(80) / 100) percentage(random(80) / 100));
+            clip-path: inset(percentage(random(50) / 100) percentage(random(50) / 100) percentage(random(50) / 100) percentage(random(50) / 100));
+            z-index: random(20);
         }
     }
     #{$initPercent + $percentOffset + 1}%{
@@ -55,7 +56,8 @@ $percentOffset: 20;
     }
     @for $i from 0 through $steps{
         #{percentage(($initPercent + $i / $steps * $percentOffset) / 100)}{
-            clip-path: inset(percentage(random(80) / 100) percentage(random(80) / 100) percentage(random(80) / 100) percentage(random(80) / 100));
+            clip-path: inset(percentage(random(50) / 100) percentage(random(50) / 100) percentage(random(50) / 100) percentage(random(50) / 100));
+            z-index: random(20);
         }
     }
     #{$initPercent + $percentOffset + 1}%{
@@ -64,14 +66,15 @@ $percentOffset: 20;
 }
 
 @keyframes svg-glitch-move-effect{
+    $offset: 16;
     #{$initPercent - 1}%{
         left: 0;
         top: 0;
     }
     @for $i from 0 through $steps{
         #{percentage(($initPercent + $i / $steps * $percentOffset) / 100)}{
-            left: random(8) - 4 + px;
-            top: random(8) - 4 + px;
+            left: random($offset) - $offset / 2 + px;
+            top: random($offset) - $offset / 2 + px;
         }
     }
     #{$initPercent + $percentOffset + 1}%{
@@ -79,3 +82,14 @@ $percentOffset: 20;
         top: 0;
     }
 }
+
+@function polygonPercentages($steps) {
+    $result: "";
+    @for $_ from 0 through $steps - 1 {
+        $result: $result + percentage(random(100) / 100) + " " + percentage(random(100) / 100) + ", ";
+    }
+    $result: $result + percentage(random(100) / 100) + " " + percentage(random(100) / 100);
+
+    @return $result;
+}
+
