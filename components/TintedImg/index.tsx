@@ -14,7 +14,7 @@ const TintedImage = ({ color, src, className }: any) => {
             alt=""
             className={clsx(className, styles.tintedImage)}
             style={{
-                filter: `brightness(200%) grayscale(100%) opacity(0.3) drop-shadow(0 0 0 ${color})`
+                filter: `brightness(200%) grayscale(100%) opacity(0.6) drop-shadow(0 0 0 ${color})`
             }} />
     );
 };
