@@ -2,9 +2,9 @@ import GlitchImg from '@components/GlitchImg';
 import ImgProfile from '@assets/profile.png';
 import { useTranslator } from '@server/hooks/useTranslator';
 import { locales } from '@src/i18n';
-import { LocaleComponentProps } from './types';
 import { provideLocale } from '@server/hooks/useLocale';
-import LocaleLink from '@components/LocaleLink';
+import LocaleLink from '@server/components/LocaleLink';
+import { LocaleComponentProps } from './types';
 
 function Header() {
     const t = useTranslator('home');
