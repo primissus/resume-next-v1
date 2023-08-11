@@ -11,3 +11,4 @@ export default function LocaleLink({ href: hrefRaw, children, ...linkProps }: Lo
 
   return <Link href={href} {...linkProps}>{children}</Link>
 }
+

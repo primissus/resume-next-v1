@@ -1,5 +1,5 @@
+import Header from '@server/components/LayoutHeader'
 import './globals.css';
-import { provideLocale } from '@server/hooks/useLocale';
 
 export const metadata = {
     title: 'Manuel Ruiz',
@@ -16,7 +16,10 @@ export default function RootLayout({
     return (
         <html lang={locale}>
             <body className="bg-slate-950 text-white">
-                {children}
+                <div className="container h-screen mx-auto ">
+                    <Header/>
+                    {children}
+                </div>
             </body>
         </html>
     );
