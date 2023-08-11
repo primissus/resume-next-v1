@@ -2,9 +2,19 @@ export const defaultLocale = 'en';
 export const locales = ['en', 'es'];
 export type ValidLocale = typeof locales[number];
 
+export type TranslatorFn = (
+    key: string,
+    options?: {
+        data?: { [key: string]: string | number },
+        debug?: boolean,
+    }
+) => string
+
+export type Translator = TranslatorFn & { locale?: string };
+
 const dictionaries: Record<ValidLocale, any> = {
-    en: import('../dictionaries/en.json').then((module) => module.default),
-    es: import('../dictionaries/es.json').then((module) => module.default),
+    en: import('./dictionaries/en.json').then((module) => module.default),
+    es: import('./dictionaries/es.json').then((module) => module.default),
 }
 
 export const getLocaleFrom = (pathname: string): string => {
@@ -12,20 +22,30 @@ export const getLocaleFrom = (pathname: string): string => {
     return locale;
 }
 
-export const getTranslator = async (locale: ValidLocale) => {
-    const dictionary = await dictionaries[locale]();
-
-    return(key: string, params?: { [key: string]: string | number }) => {
+export const getTranslatorFrom = (dictionary: any): Translator => {
+    return (key: string, { data, debug } = {}) => {
         let translation = key.split('.').reduce((obj, key) => obj && obj[key], dictionary);
+
         if (!translation) {
             return key;
         }
 
-        if (params && Object.entries(params).length) {
-            Object.entries(params).forEach(([key, value]) => {
+        if (debug) {
+            console.log(key, dictionary)
+        }
+
+        if (data && Object.entries(data).length) {
+            Object.entries(data).forEach(([key, value]) => {
                 translation = translation!.replace(`{{ ${key} }}`, String(value));
             });
         }
         return translation;
     }
 }
+
+export const getTranslator = async (locale: ValidLocale) => {
+    const dictionary = await dictionaries[locale]();
+
+    return getTranslatorFrom(dictionary);
+}
+

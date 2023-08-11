@@ -47,6 +47,9 @@ dependencies:
   remark-html:
     specifier: ^15.0.2
     version: 15.0.2
+  server-only-context:
+    specifier: ^0.0.4
+    version: 0.0.4(react@18.2.0)
   styled-components:
     specifier: 6.0.0-rc.5
     version: 6.0.0-rc.5(react-dom@18.2.0)(react@18.2.0)
@@ -4439,6 +4442,19 @@ packages:
     hasBin: true
     dependencies:
       lru-cache: 6.0.0
+    dev: false
+
+  /server-only-context@0.0.4(react@18.2.0):
+    resolution: {integrity: sha512-1rYxmp8IMLVTFw1ozM6KD/qtyUNN7VN3HN8n3SLJ/kjofY4u3LC1EvjEDPkqpiOKv6oZ6x0w0pTujoUGBTSK1A==}
+    peerDependencies:
+      react: next
+    dependencies:
+      react: 18.2.0
+      server-only: 0.0.1
+    dev: false
+
+  /server-only@0.0.1:
+    resolution: {integrity: sha512-qepMx2JxAa5jjfzxG79yPPq+8BuFToHd1hm7kI+Z4zAq1ftQiP7HcxMhDDItrbtwVeLg/cY2JnKnrcFkmiswNA==}
     dev: false
 
   /shallowequal@1.1.0:

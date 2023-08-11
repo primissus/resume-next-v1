@@ -1,9 +1,10 @@
-.imgContainerimgContainer {
+.imgContainer {
   position: relative;
 }
 
-.imgContainer>img {
+.imgContainer > img {
   position: absolute;
+  width: 100%;
   top: 0;
   left: 0;
 }

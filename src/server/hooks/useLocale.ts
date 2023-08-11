@@ -1,13 +1,19 @@
-let _locale: string;
+import { defaultLocale } from "@src/i18n";
+import userServerContext from 'server-only-context'
 
-export function useLocale() {
-    if (!_locale) {
-        throw new Error('Locale has not been provided, use provideLocale');
+const [getLocale, setLocale] = userServerContext<string | undefined>(undefined);
+
+export function provideLocale(locale: string, override?: boolean) {
+    const currentLocale = getLocale();
+
+    if (!currentLocale || override) {
+        setLocale(locale);
     }
-
-    return _locale;
 }
 
-export function provideLocale(locale: string) {
-    _locale = locale;
+export function useLocale(): string {
+    const currentLocale = getLocale();
+
+    return currentLocale || defaultLocale;
 }
+

@@ -21,16 +21,16 @@
     ],
     "paths": {
       "@assets/*": ["./assets/*"],
-      "@app/*": ["./app/*"],
-      "@components/*": ["./components/*"],
+      "@app/*": ["./src/app/*"],
+      "@components/*": ["./src/components/*"],
       "@server/*": ["./src/server/*"],
       "@src/*": ["./src/*"],
       "@types/*": ["./src/types/*"],
-      "@lib/*": ["./lib/*"],
-      "@assets/*": ["./assets/*"],
+      "@lib/*": ["./src/lib/*"],
       "@/*": ["./*"]
     }
   },
+  "types": ["react/next"],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
   "exclude": ["node_modules"]
 }
