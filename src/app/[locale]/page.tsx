@@ -4,6 +4,7 @@ import { useTranslator } from '@server/hooks/useTranslator';
 import { locales } from '@src/i18n';
 import { LocaleComponentProps } from './types';
 import { provideLocale } from '@server/hooks/useLocale';
+import LocaleLink from '@components/LocaleLink';
 
 function Header() {
     const t = useTranslator('home');
@@ -12,8 +13,8 @@ function Header() {
         <div className="p-4">
             <nav>
                 <ul className="flex flex-row gap-x-2">
-                    <li>{t('home')}</li>
-                    <li>{t('about')}</li>
+                    <li><LocaleLink href="/">{t('home')}</LocaleLink></li>
+                    <li><LocaleLink href="about-this-page">{t('about')}</LocaleLink></li>
                 </ul>
             </nav>
         </div>
