@@ -17,3 +17,9 @@ export function useLocale(): string {
     return currentLocale || defaultLocale;
 }
 
+export function useLocaleRaw(): string | undefined {
+    const currentLocale = getLocale();
+
+    return currentLocale;
+}
+

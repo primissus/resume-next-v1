@@ -1,10 +1,12 @@
 import { getPostBySlug } from '@lib/api';
 import mdToHtml from '@lib/mdToHtml';
 import PostBody from '@components/PostBody';
-import { locales } from '@/src/i18n';
+import { defaultLocale, locales } from '@src/i18n';
+import { provideLocale } from '@server/hooks/useLocale';
 
 export default async function AboutThisPage({ params: { locale } }: { params: { locale: string } }) {
-    const htmlContent = await mdToHtml(getPostBySlug('about-this-page', locale));
+    provideLocale(locale);
+    const htmlContent = await mdToHtml(getPostBySlug('about-this-page', locale || defaultLocale));
 
     return (
         <article>
