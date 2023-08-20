@@ -7,7 +7,7 @@ interface LocaleLinkProps extends LinkProps {
 }
 
 function removeTrailingSlash(path: string) {
-    if (path.endsWith('/')) {
+    if (path.length > 1 && path.endsWith('/')) {
         return path.slice(0, -2);
     }
     return path;
@@ -15,7 +15,7 @@ function removeTrailingSlash(path: string) {
 
 export default function LocaleLink({ href: hrefRaw, children, ...linkProps }: LocaleLinkProps) {
   const locale = useLocaleRaw();
-  const href = removeTrailingSlash(locale ? `/${locale}/${hrefRaw}` : hrefRaw);
+  const href = locale ? removeTrailingSlash(`/${locale}/${hrefRaw}`) : hrefRaw;
 
   return <Link href={href} {...linkProps}>{children}</Link>
 }
