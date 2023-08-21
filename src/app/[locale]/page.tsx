@@ -11,11 +11,9 @@ export default function Home({ params: { locale } }: LocaleComponentProps) {
 
     return (
         <div className="h-full flex flex-col">
-            <div className="h-full flex flex-row">
-                <div className="flex-grow">
-                    <p>{t('helloMessage')}</p>
-                </div>
-                <div className="max-w-[1000px] w-1/2 h-full overflow-hidden flex-grow">
+            <div className="h-full flex flex-row items-center">
+                <p className="text-[40px]">{t('helloMessage')}</p>
+                <div className="max-w-[1000px] w-full h-full overflow-hidden">
                     <GlitchImg src={ImgProfile} className="w-full h-full" />
                 </div>
             </div>
