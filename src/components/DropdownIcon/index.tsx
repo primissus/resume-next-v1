@@ -1,4 +1,5 @@
-import React, { ReactNode } from 'react';
+'use client';
+import { useState, ReactNode } from 'react';
 import Link from 'next/link';
 import { Icon as IconType } from 'react-feather';
 
@@ -15,18 +16,22 @@ export function DropdownItem({ children, href }: DropdownItemProps) {
 
 export interface DropdownIconProps {
     icon: IconType;
-    children?: ReactNode[];
+    children?: ReactNode[] | undefined;
 }
 
 export default function DropdownIcon({ icon: Icon, children }: DropdownIconProps) {
+    const [isOpen, setIsOpen] = useState(false);
+
     return (
         <div className='relative'>
-            <button className="p-2">
+            <button className="p-2" onClick={() => setIsOpen(!isOpen)}>
                 <Icon color='white' size={16} />
             </button>
-            <ul className="absolute right-0">
-                {children}
-            </ul>
+            {isOpen ? (
+                <ul className="absolute right-0 z-50">
+                    {children}
+                </ul>
+            ) : undefined}
         </div>
     );
 }
