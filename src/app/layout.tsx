@@ -17,7 +17,7 @@ export default function RootLayout({
         <html lang={locale}>
             <body className="bg-slate-950 text-white">
                 <div className="container h-screen mx-auto flex flex-col">
-                    <Header/>
+                    <Header />
                     {children}
                 </div>
             </body>
