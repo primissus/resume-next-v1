@@ -36,14 +36,17 @@
       "@server/*": [
         "./src/server/*"
       ],
-      "@src/*": [
-        "./src/*"
-      ],
       "@types/*": [
         "./src/types/*"
       ],
       "@lib/*": [
         "./src/lib/*"
+      ],
+      "@hooks/*": [
+        "./src/hooks/*"
+      ],
+      "@src/*": [
+        "./src/*"
       ],
       "@/*": [
         "./*"
