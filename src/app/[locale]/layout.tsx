@@ -1,4 +1,4 @@
-import { provideLocale } from '@server/hooks/useLocale';
+import { provideLocale } from "@server/hooks/useLocale";
 
 export default function HomeLayout({
     children,
@@ -7,5 +7,7 @@ export default function HomeLayout({
     children: React.ReactNode,
     params: { locale: string },
 }) {
+    provideLocale(locale, true);
+
     return children;
 }
