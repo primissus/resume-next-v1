@@ -1,5 +1,3 @@
-import Link from 'next/link';
-
 export interface DropdownItemProps {
     children: string;
     href?: string;
@@ -10,6 +8,6 @@ function noop() {}
 
 export function DropdownItem({ children, href, onClick = noop }: DropdownItemProps) {
     return (
-        <li><Link href={href || '.'} onClick={onClick}><div className="p-2">{children}</div></Link></li>
+        <li><a href={href || '.'} onClick={onClick}><div className="p-2">{children}</div></a></li>
     );
 }

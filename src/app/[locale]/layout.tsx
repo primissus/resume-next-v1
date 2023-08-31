@@ -7,7 +7,7 @@ export default function HomeLayout({
     children: React.ReactNode,
     params: { locale: string },
 }) {
-    provideLocale(locale, true);
+    provideLocale(locale);
 
     return children;
 }
