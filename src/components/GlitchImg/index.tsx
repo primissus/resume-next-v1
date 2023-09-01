@@ -1,21 +1,22 @@
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
 import clsx from 'clsx';
 
 import TintedImg from '@components/TintedImg';
+import getRatioStyle from '@lib/getRatioStyle';
 
 import styles from './styles.module.scss';
 
-const GlitchImg = ({ src, className }: any) => {
-    //const ratioStyle = `aspect-[${src.width}/${src.height}]`
-    const ratioStyle = `aspect-[${src.height}/${src.width}]`
+interface GlitchImgProps {
+    src: StaticImageData;
+    className?: string;
+}
 
-    //console.log(ratioStyle);
-
+const GlitchImg = ({ src, className }: GlitchImgProps) => {
     return (
         <div className={clsx(className, styles.imgContainer)}>
-            <TintedImg fill color="#e73396" className={clsx(styles.filterImg, ratioStyle)} src={src} alt="" />
-            <TintedImg fill color="#1d8ac9" className={clsx(styles.filterImg, ratioStyle)} src={src} alt="" />
-            <Image className={clsx(styles.originalImg, 'grayscale', 'max-w-fit', ratioStyle)} src={src} alt="" />
+            <TintedImg fill color="#e73396" className={clsx(styles.filterImg)} src={src} alt="" />
+            <TintedImg fill color="#1d8ac9" className={clsx(styles.filterImg)} src={src} alt="" />
+            <Image className={clsx(styles.originalImg, 'grayscale', 'max-w-fit')} src={src} alt="" />
         </div>
     );
 }
