@@ -18,3 +18,4 @@ export default async function AboutThisPage({ params: { locale } }: { params: { 
 export async function generateStaticParams() {
     return locales.map((locale) => ({ locale }));
 }
+

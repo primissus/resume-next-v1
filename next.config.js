@@ -7,8 +7,7 @@ const nextConfig = {
         unoptimized: true
     },
     assetPrefix: isProd ? '/resume-next-v1' : undefined,
-    basePath: '/resume-next-v1',
-    distDir: 'docs',
+    basePath: isProd ? '/resume-next-v1' : undefined,
 }
 
 module.exports = nextConfig

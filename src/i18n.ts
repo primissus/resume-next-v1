@@ -12,10 +12,10 @@ export type TranslatorFn = (
 
 export type Translator = TranslatorFn & { locale?: string };
 
-const dictionaries: Record<ValidLocale, any> = {
-    en: import('./dictionaries/en.json').then((module) => module.default),
-    es: import('./dictionaries/es.json').then((module) => module.default),
-}
+//const dictionaries: Record<ValidLocale, any> = {
+    //en: import('./dictionaries/en.json').then((module) => module.default),
+    //es: import('./dictionaries/es.json').then((module) => module.default),
+//}
 
 export const getLocaleFrom = (pathname: string): string => {
     const [, locale] = pathname.toLowerCase().split('/');
@@ -44,7 +44,8 @@ export const getTranslatorFrom = (dictionary: any): Translator => {
 }
 
 export const getTranslator = async (locale: ValidLocale) => {
-    const dictionary = await dictionaries[locale]();
+    const dictionary = await import(`./dictionaries/${locale}.json`);
+    //const dictionary = await dictionaries[locale]();
 
     return getTranslatorFrom(dictionary);
 }
