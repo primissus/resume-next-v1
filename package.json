@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build:prod": "NODE_ENV=production next build && touch docs/.nojekyll"
+    "build:prod": "rm -rf docs && NODE_ENV=production next build && mv out/ docs/ && touch docs/.nojekyll"
   },
   "dependencies": {
     "@types/node": "20.5.1",

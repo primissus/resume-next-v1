@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[127],{1127:function(e){e.exports=JSON.parse('{"home":"Inicio","about":"Acerca de","helloMessage":"Soy un desarrollador con experiencia en frontend web, backend, y aplicaciones hibridas y nativas."}')}}]);
