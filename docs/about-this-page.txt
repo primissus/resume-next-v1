@@ -1,9 +1,9 @@
 1:HL["/resume-next-v1/_next/static/css/d50f4a78ffd8e010.css",{"as":"style"}]
-0:["iaEVoNbjcWSqAkMVfEm5t",[[["",{"children":["about-this-page",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/resume-next-v1/_next/static/css/d50f4a78ffd8e010.css","precedence":"next"}]],"$L3"]]]]
+0:["AZHb_66GBPOzTJGKnWVmO",[[["",{"children":["about-this-page",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],"$L2",[[["$","link","0",{"rel":"stylesheet","href":"/resume-next-v1/_next/static/css/d50f4a78ffd8e010.css","precedence":"next"}]],"$L3"]]]]
 4:HL["/resume-next-v1/_next/static/css/b0a73726190ba88b.css",{"as":"style"}]
-5:I{"id":6483,"chunks":["263:static/chunks/263-18f413aa76a53aa9.js","185:static/chunks/app/layout-10a7976a81961a2e.js"],"name":"LocaleProvider","async":false}
-6:I{"id":2990,"chunks":["263:static/chunks/263-18f413aa76a53aa9.js","185:static/chunks/app/layout-10a7976a81961a2e.js"],"name":"","async":false}
-7:I{"id":4241,"chunks":["263:static/chunks/263-18f413aa76a53aa9.js","185:static/chunks/app/layout-10a7976a81961a2e.js"],"name":"","async":false}
+5:I{"id":6483,"chunks":["263:static/chunks/263-18f413aa76a53aa9.js","185:static/chunks/app/layout-4ca76962900b6ac6.js"],"name":"LocaleProvider","async":false}
+6:I{"id":2990,"chunks":["263:static/chunks/263-18f413aa76a53aa9.js","185:static/chunks/app/layout-4ca76962900b6ac6.js"],"name":"","async":false}
+7:I{"id":4970,"chunks":["263:static/chunks/263-18f413aa76a53aa9.js","185:static/chunks/app/layout-4ca76962900b6ac6.js"],"name":"","async":false}
 8:I{"id":9720,"chunks":["272:static/chunks/webpack-797f348aca1d2b6e.js","298:static/chunks/62bf288f-da85f272fc4391d6.js","198:static/chunks/198-8675e4704dbdd298.js"],"name":"default","async":false}
 9:I{"id":2403,"chunks":["272:static/chunks/webpack-797f348aca1d2b6e.js","298:static/chunks/62bf288f-da85f272fc4391d6.js","198:static/chunks/198-8675e4704dbdd298.js"],"name":"default","async":false}
 3:[["$","meta","0",{"charSet":"utf-8"}],["$","title","1",{"children":"Manuel Ruiz"}],["$","meta","2",{"name":"description","content":"Manuel Ruiz Profile Page"}],["$","meta","3",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
