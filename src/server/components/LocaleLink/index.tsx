@@ -1,16 +1,10 @@
 import Link, { LinkProps } from 'next/link';
 import { useLocaleRaw } from '@server/hooks/useLocale';
+import removeTrailingSlash from '@lib/removeTrailingSlash';
 
 interface LocaleLinkProps extends LinkProps {
   children: React.ReactElement | string;
   href: string;
-}
-
-function removeTrailingSlash(path: string) {
-    if (path.length > 1 && path.endsWith('/')) {
-        return path.slice(0, -2);
-    }
-    return path;
 }
 
 export default function LocaleLink({ href: hrefRaw, children, ...linkProps }: LocaleLinkProps) {

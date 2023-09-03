@@ -1,3 +1,5 @@
+import removeTrailingSlash from "@lib/removeTrailingSlash";
+
 export interface DropdownItemProps {
     children: string;
     href: string;
@@ -10,6 +12,6 @@ function noop() { }
 
 export function DropdownItem({ children, href, onClick = noop }: DropdownItemProps) {
     return (
-        <li><a href={basePath ? `${basePath}${href}` : href} onClick={onClick}><div className="p-2">{children}</div></a></li>
+        <li><a href={removeTrailingSlash(basePath ? `${basePath}${href}` : href)} onClick={onClick}><div className="p-2">{children}</div></a></li>
     );
 }
