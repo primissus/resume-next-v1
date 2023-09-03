@@ -21,8 +21,10 @@ export default function Home({ params: { locale } }: LocaleComponentProps) {
                         <p className={clsx(styles.greetingText, 'text-[40px] w-[85vw] max-w-[800px]')}>{t('helloMessage')}</p>
                     </div>
                 </div>
-                <div className="max-w-[1000px] h-full overflow-hidden absolute md:relative bottom-0 left-16 max-h-[650px] md:max-h-max" style={{ aspectRatio: `${ratioStyle}`}}>
-                    <GlitchImg src={ImgProfile} className="w-full h-full" />
+                <div className="max-w-[1000px] h-full overflow-hidden w-[70%]">
+                    <div className="h-full absolute bottom-0 left-0 md:left-[auto] max-h-[750px] md:max-h-max" style={{ aspectRatio: `${ratioStyle}`}}>
+                        <GlitchImg src={ImgProfile} className="w-full h-full" />
+                    </div>
                 </div>
             </div>
         </div>
