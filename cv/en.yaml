@@ -2,7 +2,7 @@ name: Manuel A. Ruiz Rivas
 title: Software Developer
 profileDescription: >
   Curious and passionate developer that enjoys getting into challenging
-  problems. I have worked as full-stack developer for more than 6
+  problems. I have worked as full-stack developer for more than 7
   years with web frameworks like Angular and React, and Node.js based
   frameworks like Express and AWS serverless technologies.
 employmentHistory:
@@ -12,9 +12,9 @@ employmentHistory:
     start: 2022-08
     current: true
     description: >
-      Worked as software engineer using React and React Native
-      technologies for front-end development, and Swift and Java for native
-      libraries.
+      I work as a front-end developer suing NextJS and React frameworks and
+      some Node based utilities. I've also worked with technologies that use
+      Go and Python languages, for web APIs and routing.
   - job: Software Engineer III
     company: Wizeline
     place: Guadalajara

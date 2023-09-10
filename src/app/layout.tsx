@@ -16,10 +16,10 @@ export default function RootLayout({
     const locale = useLocale();
 
     return (
-        <html lang={locale}>
-            <body className="bg-slate-950 text-white">
+        <html lang={locale} className="h-full">
+            <body className="h-full bg-slate-950 text-white">
                 <LocaleProvider>
-                    <div className="container h-screen mx-auto flex flex-col">
+                    <div className="container h-full mx-auto flex flex-col">
                         <Header />
                         {children}
                     </div>
