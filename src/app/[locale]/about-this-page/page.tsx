@@ -4,7 +4,9 @@ import PostBody from '@components/PostBody';
 import { defaultLocale, locales } from '@src/i18n';
 import { provideLocale } from '@server/hooks/useLocale';
 
-export default async function AboutThisPage({ params: { locale } }: { params: { locale: string } }) {
+interface AboutThisPageProps { params: { locale: string } }
+
+export default async function AboutThisPage({ params: { locale } }: AboutThisPageProps) {
     provideLocale(locale);
     const htmlContent = await mdToHtml(getPostBySlug('about-this-page', locale || defaultLocale));
 
