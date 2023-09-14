@@ -1,4 +1,4 @@
-interface CVEmployment {
+export interface CVEmployment {
     job: string;
     company: string;
     place?: string;
@@ -8,7 +8,7 @@ interface CVEmployment {
     description: string;
 }
 
-interface CVEducationInfo {
+export interface CVEducationInfo {
     title: string;
     school: string;
     place?: string;
@@ -16,28 +16,28 @@ interface CVEducationInfo {
     end?: string;
 }
 
-interface CVContact {
+export interface CVContact {
     phone?: string;
     email?: string;
 }
 
-interface CVSocial {
+export interface CVSocial {
     network: string;
     text: string;
     link: string;
 }
 
-interface CVLanguage {
+export interface CVLanguage {
     name: string;
     rank: number;
 }
 
-interface CVSkill {
+export interface CVSkill {
     name: string;
     rank: number;
 }
 
-interface CVProject {
+export interface CVProject {
     projectName: string;
     place?: string;
     start?: string;
@@ -45,7 +45,7 @@ interface CVProject {
     description: string;
 }
 
-interface CV {
+export interface CVData {
     name: string;
     title: string;
     profileDescription: string;

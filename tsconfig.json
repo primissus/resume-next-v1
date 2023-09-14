@@ -39,7 +39,7 @@
       "@server/*": [
         "./src/server/*"
       ],
-      "@types/*": [
+      "@type/*": [
         "./src/types/*"
       ],
       "@lib/*": [
