@@ -6,5 +6,6 @@
     "skills": "Habilidades",
     "languages": "Idiomas",
     "education": "Educación",
-    "portfolio": "Portafolio"
+    "portfolio": "Portafolio",
+    "atSeparator": "en"
 }

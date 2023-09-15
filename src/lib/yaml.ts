@@ -2,13 +2,11 @@ import fs from 'fs';
 import { join } from 'path';
 import { parse as parseYaml } from 'yaml';
 import { postsDir } from '@constants/posts';
+import { defaultLocale } from '@src/i18n';
 
 export function readYamlPost(postName: string, locale: string) {
-    const fullPath = join(postsDir, locale, `${postName}.yaml`);
+    const fullPath = join(postsDir, locale || defaultLocale, `${postName}.yaml`);
     const fileContents = fs.readFileSync(fullPath, 'utf8');
-
-    console.log('fullPath', fullPath);
-    //console.log('fileContents', fileContents);
 
     return parseYaml(fileContents);
 }

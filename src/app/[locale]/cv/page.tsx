@@ -1,9 +1,39 @@
+import {} from 'date-fns';
 import { readYamlPost } from '@lib/yaml';
+import { joinWith } from '@lib/string';
 import { useTranslator } from '@server/hooks/useTranslator';
 import { provideLocale } from '@server/hooks/useLocale';
-import { CVData } from '@type/cv';
+import { CVData, CVEmployment } from '@type/cv';
 
-interface CVPageProps { params: { locale: string } }
+interface CVPageProps {
+    params: { locale: string };
+}
+
+function ExperienceItem({
+    item,
+    atSeparator,
+}: {
+    item: CVEmployment;
+    atSeparator: string;
+}) {
+    return (
+        <li>
+            <div>
+                <h4>
+                    {joinWith(', ', [
+                        joinWith(` ${atSeparator} `, [item.job, item.company]),
+                        item.place,
+                    ])}
+                </h4>
+            </div>
+            <div>
+                <p>
+                    {item.description}
+                </p>
+            </div>
+        </li>
+    );
+}
 
 export default function CVPage({ params: { locale } }: CVPageProps) {
     provideLocale(locale);
@@ -23,6 +53,15 @@ export default function CVPage({ params: { locale } }: CVPageProps) {
                 </div>
                 <div>
                     <h3>{t('experience')}</h3>
+                    <ol>
+                        {cvData.employmentHistory.map((item) => (
+                            <ExperienceItem
+                                key={item.job}
+                                item={item}
+                                atSeparator={t('atSeparator')}
+                            />
+                        ))}
+                    </ol>
                 </div>
             </div>
         </article>
