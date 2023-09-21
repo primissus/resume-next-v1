@@ -3,7 +3,7 @@ import { usePathname } from 'next/navigation';
 import { Globe } from 'react-feather';
 import DropdownIcon, { DropdownItem } from '@components/DropdownIcon';
 import { useTranslator } from '@hooks/useTanslator';
-import { locales } from '@src/i18n';
+import { locales } from '@lib/i18n';
 import { Suspense } from 'react';
 
 

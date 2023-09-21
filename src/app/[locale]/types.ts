@@ -1,4 +1,4 @@
-import { ValidLocale } from '@src/i18n';
+import { ValidLocale } from '@lib/i18n';
 
 export interface LocaleParams {
     locale: ValidLocale;

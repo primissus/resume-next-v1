@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import GlitchImg from '@components/GlitchImg';
 import ImgProfile from '@assets/profile.png';
 import { useTranslator } from '@server/hooks/useTranslator';
-import { locales } from '@src/i18n';
+import { locales } from '@lib/i18n';
 import { provideLocale } from '@server/hooks/useLocale';
 import { LocaleComponentProps } from './types';
 import getRatioStyle from '@lib/getRatioStyle';

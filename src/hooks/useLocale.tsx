@@ -1,8 +1,8 @@
 'use client'
 import { createContext, useContext } from 'react';
 import { useParams } from 'next/navigation';
-import { defaultLocale } from '@src/i18n';
-import { ValidLocale } from '../i18n';
+import { defaultLocale } from '@lib/i18n';
+import { ValidLocale } from '../lib/i18n';
 
 export const LocaleContext = createContext<ValidLocale>('en');
 

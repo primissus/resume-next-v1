@@ -1,7 +1,7 @@
 import { getPostBySlug } from '@lib/api';
 import mdToHtml from '@lib/mdToHtml';
 import PostBody from '@components/PostBody';
-import { defaultLocale, locales } from '@src/i18n';
+import { defaultLocale, locales } from '@lib/i18n';
 import { provideLocale } from '@server/hooks/useLocale';
 
 interface AboutThisPageProps { params: { locale: string } }

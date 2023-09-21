@@ -1,4 +1,3 @@
-import {} from 'date-fns';
 import { readYamlPost } from '@lib/yaml';
 import { joinWith } from '@lib/string';
 import { useTranslator } from '@server/hooks/useTranslator';
@@ -28,6 +27,11 @@ function ExperienceItem({
             </div>
             <div>
                 <p>
+                    {joinWith(' – ', [])}
+                </p>
+            </div>
+            <div>
+                <p>
                     {item.description}
                 </p>
             </div>
@@ -50,6 +54,9 @@ export default function CVPage({ params: { locale } }: CVPageProps) {
                 <div>
                     <h3>{t('profile')}</h3>
                     <p>{cvData.profileDescription}</p>
+                </div>
+                <div>
+                    <p></p>
                 </div>
                 <div>
                     <h3>{t('experience')}</h3>

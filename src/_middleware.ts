@@ -1,6 +1,6 @@
 import { parse as parseLangs } from 'accept-language-parser';
 import { NextRequest, NextResponse } from 'next/server';
-import { ValidLocale, defaultLocale, getLocaleFrom, locales } from '@src/i18n';
+import { ValidLocale, defaultLocale, getLocaleFrom, locales } from '@lib/i18n';
 
 const findBestMatchingLocale = (acceptLangHeader: string): ValidLocale => {
     const parsedLangs = parseLangs(acceptLangHeader);
