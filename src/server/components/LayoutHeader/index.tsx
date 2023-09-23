@@ -1,6 +1,6 @@
 import { useTranslator } from '@server/hooks/useTranslator';
 import LocaleLink from '@server/components/LocaleLink';
-import LanguagesDropdown from '@components/LanguagesDropdown';
+import { LanguagesDropdown } from '@components/LanguagesDropdown';
 
 
 const NavItem = ({ children, href }: { children: string; href: string; }) => (

@@ -1,4 +1,4 @@
-import removeTrailingSlash from "@lib/removeTrailingSlash";
+import removeTrailingSlash from '@lib/removeTrailingSlash';
 
 export interface DropdownItemProps {
     children: string;
@@ -8,10 +8,23 @@ export interface DropdownItemProps {
 
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH;
 
-function noop() { }
+function noop() {}
 
-export function DropdownItem({ children, href, onClick = noop }: DropdownItemProps) {
+export function DropdownItem({
+    children,
+    href,
+    onClick = noop,
+}: DropdownItemProps) {
     return (
-        <li><a href={removeTrailingSlash(basePath ? `${basePath}${href}` : href)} onClick={onClick}><div className="p-2">{children}</div></a></li>
+        <li>
+            <a
+                href={removeTrailingSlash(
+                    basePath ? `${basePath}${href}` : href,
+                )}
+                onClick={onClick}
+            >
+                <div className='p-2'>{children}</div>
+            </a>
+        </li>
     );
 }

@@ -20,4 +20,3 @@ export default async function AboutThisPage({ params: { locale } }: AboutThisPag
 export async function generateStaticParams() {
     return locales.map((locale) => ({ locale }));
 }
-
