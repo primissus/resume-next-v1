@@ -1,21 +1,21 @@
 import { useTranslator } from '@server/hooks/useTranslator';
 import { joinWith } from '@lib/string';
-import { CVEmployment } from '@type/cv';
+import { CVSectionItem } from '@type/cv';
 import DateRange from '@components/DateRange';
 
 function ExperienceItem({
-    info: { job, company, start, end, current, description, place },
+    atSeparator,
+    info: { title, at, place, start, end, current, description },
 }: {
-    info: CVEmployment;
+    atSeparator?: string;
+    info: CVSectionItem;
 }) {
-    const t = useTranslator('cv');
-
     return (
-        <li>
+        <li className="mb-4">
             <div>
-                <h4>
+                <h4 className="text-lg font-bold">
                     {joinWith(', ', [
-                        joinWith(` ${t('atSeparator')} `, [job, company]),
+                        joinWith(` ${atSeparator || ', '} `, [title, at]),
                         place,
                     ])}
                 </h4>
@@ -26,7 +26,7 @@ function ExperienceItem({
                 </p>
             </div>
             <div>
-                <p>{description}</p>
+                <p className="text-lg">{description}</p>
             </div>
         </li>
     );

@@ -1,11 +1,9 @@
 import { readYamlPost } from '@lib/yaml';
 import { locales } from '@lib/i18n';
-import { useTranslator } from '@server/hooks/useTranslator';
 import { provideLocale } from '@server/hooks/useLocale';
 import { CVData } from '@type/cv';
-import ExperienceItem from './ExperienceItem';
-import EducationItem from './EducationItem';
-import PortfolioItem from './PortfolioItem';
+import Section from './Section';
+import AsideSection from './AsideSection';
 
 interface CVPageProps {
     params: { locale: string };
@@ -13,46 +11,24 @@ interface CVPageProps {
 
 export default function CVPage({ params: { locale } }: CVPageProps) {
     provideLocale(locale);
-    const t = useTranslator('cv');
     const cvData: CVData = readYamlPost('cv', locale);
 
     return (
-        <article>
-            <div>
-                <h2>{cvData.name}</h2>
-                <h3>{cvData.title}</h3>
+        <article className='max-w-4xl mx-auto'>
+            <div className='mb-12'>
+                <h2 className="text-4xl font-bold">{cvData.name}</h2>
+                <h3 className="text-xl">{cvData.title}</h3>
             </div>
-            <div>
+            <div className="flex flex-col md:flex-row gap-x-8">
                 <div>
-                    <h3>{t('profile')}</h3>
-                    <p>{cvData.profileDescription}</p>
+                    {cvData.sections.map((section) => (
+                        <Section key={section.section} section={section} />
+                    ))}
                 </div>
                 <div>
-                    <p></p>
-                </div>
-                <div>
-                    <h3>{t('experience')}</h3>
-                    <ol>
-                        {cvData.employmentHistory.map((item) => (
-                            <ExperienceItem key={item.job} info={item} />
-                        ))}
-                    </ol>
-                </div>
-                <div>
-                    <h3>{t('education')}</h3>
-                    <ol>
-                        {cvData.education.map((item) => (
-                            <EducationItem key={item.school} info={item} />
-                        ))}
-                    </ol>
-                </div>
-                <div>
-                    <h3>{t('portfolio')}</h3>
-                    <ol>
-                        {cvData.portfolio.map((item) => (
-                            <PortfolioItem key={item.projectName} info={item} />
-                        ))}
-                    </ol>
+                    {cvData.asideSections.map((section) => (
+                        <AsideSection section={section} />
+                    ))}
                 </div>
             </div>
         </article>

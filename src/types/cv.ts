@@ -45,15 +45,39 @@ export interface CVProject {
     description: string;
 }
 
+export interface CVSectionItem {
+    title: string;
+    at?: string;
+    place?: string;
+    start?: string;
+    end?: string;
+    current?: boolean;
+    description?: string;
+}
+
+export interface CVAsideSectionItem {
+    name?: string;
+    text?: string;
+    link?: string;
+    rank?: number;
+}
+
+export interface CVSection {
+    section: string;
+    description?: string;
+    atSeparator?: string;
+    items?: CVSectionItem[];
+}
+
+export interface CVAsideSection {
+    section: string;
+    items?: CVAsideSectionItem[];
+}
+
 export interface CVData {
     name: string;
     title: string;
     profileDescription: string;
-    employmentHistory: CVEmployment[];
-    education: CVEducationInfo[];
-    portfolio: CVProject[];
-    contactInfo: CVContact;
-    social: CVSocial[];
-    skills: CVSkill[];
-    languages: CVLanguage[];
+    sections: CVSection[];
+    asideSections: CVAsideSection[];
 }

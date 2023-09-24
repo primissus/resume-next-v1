@@ -1,159 +1,171 @@
 name: Manuel A. Ruiz Rivas
 title: Software Developer
-profileDescription: >
-  Soy un desarrollador curioso y apasionado que disfruta de resolver
-  problemas retadores. He trabajado como desarrollador full-stack por
-  mas de 7 años con technologias web como Angular y React, y frameworks basados
-  en Noje.js como Express y tecnologías de AWS.
-employmentHistory:
-  - job: Ingeniero Front-end IV
-    company: Lyft
-    place: Guadalajara
-    start: 2022-08
-    current: true
-    description: >
-      Trabajo como desarrollador front-end utilizando las tecnologías de
-      NextJS, React y utilidades basadas en Node. Tambien he trabajado con
-      algunas tecnologias basadas en Go y Python para el enrutamiento y web
-      APIs.
-  - job: Software Engineer III
-    company: Wizeline
-    place: Guadalajara
-    start: 2021-08
-    end: 2022-08
-    description: >
-      Trabaje como Ingeniero de Software utilizando las tecnologías de React y
-      React Native para el desarrollo de Front-End, y Swift y Java para el
-      desarrollo de librerias nativas de React Native.
-  - job: Desarrollador Full-Stack
-    company: Industrias Resser
-    place: Guadalajara
-    start: 2019-06
-    end: 2021-08
-    description: >
-      Desarrollador de tecnologías móviles y Front-End con React y React
-      Native. Tambien trabajé como desarrollador Back-End utilizando las
-      herramientas serverless de AWS (kinesis, lambda, cloudfront, RDS y
-      cognito), bases de datos SQL (PostgreSQL, MySQL y SQL Server) y Node.js.
-  - job: Desarrollador Freelance Full-Stack
-    start: 2017-02
-    end: 2019-06
-    description: >
-      Desarrollador Full-Stack con tecnologías de Node.JS y utlización de los
-      frameworks como Express.js, LoopBack 3, Socket.io y MongoDB para el
-      desarrollo Back-End, y Angular 7+ y Cordova para el desarrollo de
-      applicaciones web y móviles.
-education:
-  - title: Ingeniería en Desarrollo de Software
-    school: Centro de Enseñanza Técnica Industrial
-    place: Guadalajara
-    start: 2016-08
-    end: 2020-06
-  - title: Tecnólogo en Informática y Computación
-    school: Centro de Enseñanza Técnica Industrial
-    place: Guadalajara
-    start: 2012-08
-    end: 2016-06
-portfolio:
-  - projectName: Plataformas de Boats.com
-    place: Remoto
-    start: 2022-01
-    end: 2022-08
-    description: >
-      Plataformas de E-Commerce para la venta de botes y yates. Ya que esta
-      compañía es dueña de distintas marcas alrededor del mundo a través de
-      las cuales comercializa, como boats.com y yatchworld.com, tabaje como
-      ingeniero de Front-End a cargo del desarrollo y mantenimiento del sitio
-      de yatchworld utilizando las tecnologías de Typescript y React.
-  - projectName: Sercvicio de Asociados de Betterware "Betternet"
-    place: Guadalajara
-    start: 2021-08
-    end: 2021-01
-    description: >
-      Sistema web y app móvil para la administración y registro de asociados
-      y distribuidores del sistema electrónico interno de Betterware México.
-      Colaboré en el desarrollo del la pagina web, en la parte Front-End y la
-      aplicación móvil utilizando React y React Native, y el desarrollo de
-      librerías nativas para Android y iOS para elazar un servicio de
-      reconocimiento facial in Swift y Java.
-  - projectName: Servicio de Entrega de Pollo Pepe
-    place: Guadalajara
-    start: 2021-01
-    end: 2022-08
-    description: >
-      Servicio de rastreo y entregas a domicilio de comida para la compañía de
-      la franquicia de Pollo Pepe para la mejora de la eficiencia y monitoreo
-      de las entregas de los repartidores internos, y la integración
-      personalizada de sus servicios existentes. Participa como lider de
-      desarrollo y desarollador Full-Stack. Para la parte Front-End, hice el
-      desarrollo con las tecnologías de React, y React Native para la
-      aplicación móvil; mientras que para el desarrollo de Back-End, utilicé
-      las tecnologías de Node.js y AWS (Lambda, Kinesis, CloudFormation, S3
-      y RDS), usando PostgreSQL como base de datos y Serverless framework cómo
-      orquestador de arquitectura.
-  - projectName: Safy
-    place: Guadalajara
-    start: 2019
-    end: 2020
-    description: >
-      Aplicación de monitoreo familiar y servicio basado en la tecnología GPS
-      móvil. Tabajé como desarrollador Full-Stack, utilizando React Native para
-      la aplicación móvil, los servicios de AWS (Lambda, Kinesis,
-      CloudFormation, S3, RDS y Cognito) y MySQL para el desarrollo Back-End.
+sections:
+    - section: Perfil
+      decription: >
+          Soy un desarrollador curioso y apasionado que disfruta de resolver
+          problemas retadores. He trabajado como desarrollador full-stack por
+          mas de 7 años con technologias web como Angular y React, y frameworks basados
+          en Noje.js como Express y tecnologías de AWS.
+    - section: Experiencia
+      atSeparator: en
+      items:
+          - title: Ingeniero Front-end IV
+            at: Lyft
+            place: Guadalajara
+            start: 2022-08
+            current: true
+            description: >
+                Trabajo como desarrollador front-end utilizando las tecnologías de
+                NextJS, React y utilidades basadas en Node. Tambien he trabajado con
+                algunas tecnologias basadas en Go y Python para el enrutamiento y web
+                APIs.
+          - title: Software Engineer III
+            at: Wizeline
+            place: Guadalajara
+            start: 2021-08
+            end: 2022-08
+            description: >
+                Trabaje como Ingeniero de Software utilizando las tecnologías de React y
+                React Native para el desarrollo de Front-End, y Swift y Java para el
+                desarrollo de librerias nativas de React Native.
+          - title: Desarrollador Full-Stack
+            at: Industrias Resser
+            place: Guadalajara
+            start: 2019-06
+            end: 2021-08
+            description: >
+                Desarrollador de tecnologías móviles y Front-End con React y React
+                Native. Tambien trabajé como desarrollador Back-End utilizando las
+                herramientas serverless de AWS (kinesis, lambda, cloudfront, RDS y
+                cognito), bases de datos SQL (PostgreSQL, MySQL y SQL Server) y Node.js.
+          - title: Desarrollador Freelance Full-Stack
+            at: 2017-02
+            end: 2019-06
+            description: >
+                Desarrollador Full-Stack con tecnologías de Node.JS y utlización de los
+                frameworks como Express.js, LoopBack 3, Socket.io y MongoDB para el
+                desarrollo Back-End, y Angular 7+ y Cordova para el desarrollo de
+                applicaciones web y móviles.
+    - section: Educación
+      atSeparator: ', '
+      items:
+          - title: Ingeniería en Desarrollo de Software
+            at: Centro de Enseñanza Técnica Industrial
+            place: Guadalajara
+            start: 2016-08
+            end: 2020-06
+          - title: Tecnólogo en Informática y Computación
+            at: Centro de Enseñanza Técnica Industrial
+            place: Guadalajara
+            start: 2012-08
+            end: 2016-06
+    - section: Portafolio
+      items:
+          - title: Plataformas de Boats.com
+            place: Remoto
+            start: 2022-01
+            end: 2022-08
+            description: >
+                Plataformas de E-Commerce para la venta de botes y yates. Ya que esta
+                compañía es dueña de distintas marcas alrededor del mundo a través de
+                las cuales comercializa, como boats.com y yatchworld.com, tabaje como
+                ingeniero de Front-End a cargo del desarrollo y mantenimiento del sitio
+                de yatchworld utilizando las tecnologías de Typescript y React.
+          - title: Sercvicio de Asociados de Betterware "Betternet"
+            place: Guadalajara
+            start: 2021-08
+            end: 2021-01
+            description: >
+                Sistema web y app móvil para la administración y registro de asociados
+                y distribuidores del sistema electrónico interno de Betterware México.
+                Colaboré en el desarrollo del la pagina web, en la parte Front-End y la
+                aplicación móvil utilizando React y React Native, y el desarrollo de
+                librerías nativas para Android y iOS para elazar un servicio de
+                reconocimiento facial in Swift y Java.
+          - title: Servicio de Entrega de Pollo Pepe
+            place: Guadalajara
+            start: 2021-01
+            end: 2022-08
+            description: >
+                Servicio de rastreo y entregas a domicilio de comida para la compañía de
+                la franquicia de Pollo Pepe para la mejora de la eficiencia y monitoreo
+                de las entregas de los repartidores internos, y la integración
+                personalizada de sus servicios existentes. Participa como lider de
+                desarrollo y desarollador Full-Stack. Para la parte Front-End, hice el
+                desarrollo con las tecnologías de React, y React Native para la
+                aplicación móvil; mientras que para el desarrollo de Back-End, utilicé
+                las tecnologías de Node.js y AWS (Lambda, Kinesis, CloudFormation, S3
+                y RDS), usando PostgreSQL como base de datos y Serverless framework cómo
+                orquestador de arquitectura.
+          - title: Safy
+            place: Guadalajara
+            start: 2019
+            end: 2020
+            description: >
+                Aplicación de monitoreo familiar y servicio basado en la tecnología GPS
+                móvil. Tabajé como desarrollador Full-Stack, utilizando React Native para
+                la aplicación móvil, los servicios de AWS (Lambda, Kinesis,
+                CloudFormation, S3, RDS y Cognito) y MySQL para el desarrollo Back-End.
 
-      App store:
-      https://apps.apple.com/mx/app/safy/id1476758140
+                App store:
+                https://apps.apple.com/mx/app/safy/id1476758140
 
-      Play store:
-      https://play.google.com/store/apps/details?id=mx.com.safy
-  - projectName: Refuse Bike, Indoor Cycling
-    place: Guadalajara
-    start: 2019
-    description: >
-      Plataforma web para la administracion de clases de "Indoor Cycling",
-      el registro y manejo de usuarios, venta de paquetes e incripción de
-      clases. Trabajé como desarrollador Full-Stack con el framework de
-      Angular 7+ para el sitio web, LoopBack.js y MocngoDB para el desarrollo
-      Back-End, y React Native para el desarrollo de la aplicación móvil.
-      Sitio web: https://refusebike.com/
-contactInfo:
-  phone: +52 3322281832
-  email: rur.manuel@gmail.com
-social:
-  - network: LinkedIn
-    text: manuel-rur
-    link: http://www.linkedin.com/in/manuel-rur
-skills:
-  - name: React
-    rank: 5
-  - name: React Native
-    rank: 5
-  - name: Typescript
-    rank: 5
-  - name: JavaScript
-    rank: 5
-  - name: NextJS
-    rank: 4
-  - name: Node.js
-    rank: 5
-  - name: Angular
-    rank: 4
-  - name: Amazon AWS
-    rank: 4
-  - name: PostgreSQL
-    rank: 4
-  - name: MongoDB
-    rank: 4
-  - name: MySQL
-    rank: 4
-  - name: Java
-    rank: 4
-  - name: Google Cloud Platform
-    rank: 3
-  - name: Docker
-    rank: 3
-languages:
-  - name: Español
-    rank: 5
-  - name: Inglés
-    rank: 4
+                Play store:
+                https://play.google.com/store/apps/details?id=mx.com.safy
+          - title: Refuse Bike, Indoor Cycling
+            place: Guadalajara
+            start: 2019
+            description: >
+                Plataforma web para la administracion de clases de "Indoor Cycling",
+                el registro y manejo de usuarios, venta de paquetes e incripción de
+                clases. Trabajé como desarrollador Full-Stack con el framework de
+                Angular 7+ para el sitio web, LoopBack.js y MocngoDB para el desarrollo
+                Back-End, y React Native para el desarrollo de la aplicación móvil.
+                Sitio web: https://refusebike.com/
+asideSections:
+    - section: Contacto
+      items:
+          - text: rur.manuel@gmail.com
+          # - text: +52 3322281832
+    - section: Redes
+      items:
+          - name: Linked In
+            text: manuel-rur
+            link: http://www.linkedin.com/in/manuel-rur
+    - section: Habilidades
+      items:
+          - name: React
+            rank: 5
+          - name: React Native
+            rank: 5
+          - name: Typescript
+            rank: 5
+          - name: JavaScript
+            rank: 5
+          - name: NextJS
+            rank: 4
+          - name: Node.js
+            rank: 5
+          - name: Angular
+            rank: 4
+          - name: Amazon AWS
+            rank: 4
+          - name: PostgreSQL
+            rank: 4
+          - name: MongoDB
+            rank: 4
+          - name: MySQL
+            rank: 4
+          - name: Java
+            rank: 4
+          - name: Google Cloud Platform
+            rank: 3
+          - name: Docker
+            rank: 3
+    - section: Idiomas
+      items:
+          - name: Spanish
+            rank: 5
+          - name: English
+            rank: 4
