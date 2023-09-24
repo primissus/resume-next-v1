@@ -17,6 +17,7 @@ export default function LayoutHeader() {
             <ul className="flex flex-row items-center">
                 <NavItem href="/">{t('home')}</NavItem>
                 <NavItem href="about-this-page">{t('about')}</NavItem>
+                <NavItem href="cv">{t('cv')}</NavItem>
                 <div className="flex-grow" />
                 <li>
                     <LanguagesDropdown />
