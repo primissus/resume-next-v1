@@ -4,6 +4,7 @@ import { provideLocale } from '@server/hooks/useLocale';
 import { CVData } from '@type/cv';
 import Section from './Section';
 import AsideSection from './AsideSection';
+import './styles.css';
 
 interface CVPageProps {
     params: { locale: string };
@@ -16,10 +17,10 @@ export default function CVPage({ params: { locale } }: CVPageProps) {
     return (
         <article className='max-w-4xl mx-auto'>
             <div className='mb-12'>
-                <h2 className="text-4xl font-bold">{cvData.name}</h2>
-                <h3 className="text-xl">{cvData.title}</h3>
+                <h2 className='text-4xl font-bold'>{cvData.name}</h2>
+                <h3 className='text-xl'>{cvData.title}</h3>
             </div>
-            <div className="flex flex-col md:flex-row gap-x-8">
+            <div className='flex flex-col md:flex-row gap-x-8 print:flex-row'>
                 <div>
                     {cvData.sections.map((section) => (
                         <Section key={section.section} section={section} />
@@ -27,7 +28,7 @@ export default function CVPage({ params: { locale } }: CVPageProps) {
                 </div>
                 <div>
                     {cvData.asideSections.map((section) => (
-                        <AsideSection section={section} />
+                        <AsideSection key={section.section} section={section} />
                     ))}
                 </div>
             </div>
