@@ -1,5 +1,9 @@
-/*@media print {*/
-/*article {*/
-/*background-color: red;*/
-/*}*/
-/*}*/
+@media print {
+    article {
+        color: #262b33;
+    }
+
+    .date-range {
+        color: #697283;
+    }
+}

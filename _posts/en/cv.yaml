@@ -96,6 +96,7 @@ sections:
             place: Guadalajara
             start: 2019
             end: 2020
+            dateFormat: yyyy
             description: >
                 Family tracking mobile application service based on phone GPS
                 technology. I worked as full-stack, using React Native for the mobile
@@ -108,6 +109,7 @@ sections:
           - title: Refuse bike
             place: Guadalajara
             start: 2019
+            dateFormat: yyyy
             description: >
                 Web platform for indoor cycling class enrollment with in platform
                 purchases and schedule management. Woked as full-stack on Angular

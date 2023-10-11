@@ -16,7 +16,7 @@ export default function CVPage({ params: { locale } }: CVPageProps) {
 
     return (
         <article className='max-w-4xl mx-auto'>
-            <div className='mb-12'>
+            <div className='mb-8'>
                 <h2 className='text-4xl font-bold'>{cvData.name}</h2>
                 <h3 className='text-xl'>{cvData.title}</h3>
             </div>

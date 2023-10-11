@@ -5,7 +5,9 @@ function RankBar({ rank, className }: { rank: number; className?: string }) {
 
     return (
         <div className={clsx('relative w-full', className)}>
-            <div className={`absolute h-[2px] w-full bg-dark-blue`} />
+            <div
+                className={`absolute h-[2px] w-full bg-dark-blue print:bg-[#e6ebf4]`}
+            />
             <div
                 className={`absolute h-[2px] bg-blue`}
                 style={{ width: `${percentage}%` }}

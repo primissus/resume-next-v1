@@ -51,6 +51,7 @@ export interface CVSectionItem {
     place?: string;
     start?: string;
     end?: string;
+    dateFormat?: string;
     current?: boolean;
     description?: string;
 }

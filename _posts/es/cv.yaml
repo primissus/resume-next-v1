@@ -102,6 +102,7 @@ sections:
             place: Guadalajara
             start: 2019
             end: 2020
+            dateFormat: yyyy
             description: >
                 Aplicación de monitoreo familiar y servicio basado en la tecnología GPS
                 móvil. Tabajé como desarrollador Full-Stack, utilizando React Native para
@@ -116,6 +117,7 @@ sections:
           - title: Refuse Bike, Indoor Cycling
             place: Guadalajara
             start: 2019
+            dateFormat: yyyy
             description: >
                 Plataforma web para la administracion de clases de "Indoor Cycling",
                 el registro y manejo de usuarios, venta de paquetes e incripción de
