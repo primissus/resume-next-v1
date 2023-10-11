@@ -33,10 +33,13 @@
       "@components/*": [
         "./src/components/*"
       ],
+      "@constants/*": [
+        "./src/constants/*"
+      ],
       "@server/*": [
         "./src/server/*"
       ],
-      "@types/*": [
+      "@type/*": [
         "./src/types/*"
       ],
       "@lib/*": [

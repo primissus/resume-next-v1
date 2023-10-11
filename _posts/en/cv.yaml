@@ -1,0 +1,164 @@
+name: Manuel A. Ruiz Rivas
+title: Software Developer
+sections:
+    - section: Profile
+      description: >
+          Curious and passionate developer that enjoys getting into challenging
+          problems. I have worked as full-stack developer for more than 7
+          years with web frameworks like Angular and React, and Node.js based
+          frameworks like Express and AWS serverless technologies.
+    - section: Experience
+      atSeparator: at
+      items:
+          - title: Front-end Engineer IV
+            at: Lyft
+            place: Guadalajara
+            start: 2022-08
+            current: true
+            description: >
+                I work as a front-end developer suing NextJS and React frameworks and
+                some Node based utilities. I've also worked with technologies that use
+                Go and Python languages, for web APIs and routing.
+          - title: Software Engineer III
+            at: Wizeline
+            place: Guadalajara
+            start: 2021-08
+            end: 2022-08
+            description: >
+                Worked as software engineer using React and React Native
+                technologies for front-end development, and Swift and Java for native
+                libraries.
+          - title: Full-stack developer
+            at: Industrias Resser
+            place: Guadalajara
+            start: 2019-06
+            end: 2021-08
+            description: >
+                Mobile and font-end web developer with React and React native
+                technologies. Also worked as back-end developer with AWS serverless
+                technologies (kinesis, lambda, cloudfront, etc.), SQL (PostgreSQL,
+                MySQL and SQL Server) databases and Node.js.
+          - title: Freelance Full-stack Developer
+            at: 2017-02
+            end: 2019-06
+            description: >
+                Worked as full-stack developer with Node.js technologies and worked
+                with frameworks such as Express.js, LoopBack 3, Socket.io and
+                MongoDB for back-end development and Angular 7+ and Cordova for
+                front-end and mobile development.
+    - section: Education
+      atSeparator: ', '
+      items:
+          - title: Software Development Engineering
+            at: Centro de Enseñanza Técnica Industrial
+            place: Guadalajara
+            start: 2016-08
+            end: 2020-06
+          - title: Informatics and Computation Bachelor's degree
+            school: Centro de Enseñanza Técnica Industrial
+            place: Guadalajara
+            start: 2012-08
+            end: 2016-06
+    - section: Portfolio
+      items:
+          - title: Boats.com Platforms
+            place: Remote
+            start: 2022-01
+            end: 2022-08
+            description: >
+                E-commerce platform to sell yatchs and boats, since it covers a multiple
+                multiple brands like boats.com an yatchworld.com. I worked here as a
+                front-end engineer mostly in charge of developing the yatchworld site
+                using Typescript and React technologies.
+          - title: Betterware's Betternet Associated Service
+            place: Guadalajara
+            start: 2021-08
+            end: 2021-01
+            description: >
+                Web system and mobile app for managing associate registration
+                and internal electronic orders for the associated and distributors of
+                Betterware Mexico. I worked developing the web system and mobile
+                app front-end using React and React Native technologies, and native
+                libraries for Android and iOS to link a service for facial recognition in
+                Swift and Java.
+          - title: Pollo Pepe's Delivery Service
+            place: Guadalajara
+            start: 2021-01
+            end: 2022-08
+            description: >
+                Food delivery service for Pollo Pepe's restaurant in order to improve
+                tracking efficiency, and custom service integrations. I worked as
+                full-stack and performed as developer's team leader, the front-end side
+                was made on React, React Native and the back-end side in NodeJs and
+                PostgreSQL on the AWS platform (Lambda, Kinesis, CloudFormation,
+                S3, etc.) and the serverless framework.
+          - title: Safy
+            place: Guadalajara
+            start: 2019
+            end: 2020
+            dateFormat: yyyy
+            description: >
+                Family tracking mobile application service based on phone GPS
+                technology. I worked as full-stack, using React Native for the mobile
+                app, and AWS Lambda, Kinesis and MySQL for the back-end side.
+
+                App store: https://apps.apple.com/mx/app/safy/id1476758140
+
+                Play store:
+                https://play.google.com/store/apps/details?id=mx.com.safy
+          - title: Refuse bike
+            place: Guadalajara
+            start: 2019
+            dateFormat: yyyy
+            description: >
+                Web platform for indoor cycling class enrollment with in platform
+                purchases and schedule management. Woked as full-stack on Angular
+                for the website, Loopback and MongoDB on the back-end side, and
+                React Native for mobile app.
+                Home site: https://refusebike.com/
+asideSections:
+    - section: Contact Information
+      items:
+          - text: rur.manuel@gmail.com
+          # - text: +52 3322281832
+    - section: Socials
+      items:
+          - name: Linked In
+            text: manuel-rur
+            link: http://www.linkedin.com/in/manuel-rur
+    - section: Skills
+      items:
+          - name: React
+            rank: 5
+          - name: React Native
+            rank: 5
+          - name: Typescript
+            rank: 5
+          - name: JavaScript
+            rank: 5
+          - name: NextJS
+            rank: 4
+          - name: Node.js
+            rank: 5
+          - name: Angular
+            rank: 4
+          - name: Amazon AWS
+            rank: 4
+          - name: PostgreSQL
+            rank: 4
+          - name: MongoDB
+            rank: 4
+          - name: MySQL
+            rank: 4
+          - name: Java
+            rank: 4
+          - name: Google Cloud Platform
+            rank: 3
+          - name: Docker
+            rank: 3
+    - section: Languages
+      items:
+          - name: Spanish
+            rank: 5
+          - name: English
+            rank: 4

@@ -1,4 +1,4 @@
-import { defaultLocale } from "@src/i18n";
+import { defaultLocale } from "@lib/i18n";
 import userServerContext from 'server-only-context'
 
 const [getLocale, setLocale] = userServerContext<string | undefined>(undefined);

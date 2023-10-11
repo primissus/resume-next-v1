@@ -1,5 +1,5 @@
 'use client'
-import { getTranslator } from '@src/i18n';
+import { getTranslator } from '@lib/i18n';
 import { useLocale } from './useLocale';
 
 export function useTranslator() {

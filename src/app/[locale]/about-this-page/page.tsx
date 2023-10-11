@@ -1,10 +1,12 @@
 import { getPostBySlug } from '@lib/api';
 import mdToHtml from '@lib/mdToHtml';
 import PostBody from '@components/PostBody';
-import { defaultLocale, locales } from '@src/i18n';
+import { defaultLocale, locales } from '@lib/i18n';
 import { provideLocale } from '@server/hooks/useLocale';
 
-export default async function AboutThisPage({ params: { locale } }: { params: { locale: string } }) {
+interface AboutThisPageProps { params: { locale: string } }
+
+export default async function AboutThisPage({ params: { locale } }: AboutThisPageProps) {
     provideLocale(locale);
     const htmlContent = await mdToHtml(getPostBySlug('about-this-page', locale || defaultLocale));
 
@@ -18,4 +20,3 @@ export default async function AboutThisPage({ params: { locale } }: { params: { 
 export async function generateStaticParams() {
     return locales.map((locale) => ({ locale }));
 }
-

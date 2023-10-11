@@ -1,4 +1,4 @@
-import Header from '@server/components/LayoutHeader'
+import Header from '@server/components/LayoutHeader';
 import './globals.css';
 import { LocaleProvider } from '@hooks/useLocale';
 import { useLocale } from '@server/hooks/useLocale';
@@ -11,15 +11,15 @@ export const metadata = {
 export default function RootLayout({
     children,
 }: {
-    children: React.ReactNode,
+    children: React.ReactNode;
 }) {
     const locale = useLocale();
 
     return (
-        <html lang={locale}>
-            <body className="bg-slate-950 text-white">
+        <html lang={locale} className='h-full'>
+            <body className='h-full bg-slate-950 text-white print:bg-inherit print:text-inherit'>
                 <LocaleProvider>
-                    <div className="container h-screen mx-auto flex flex-col">
+                    <div className='container h-full mx-auto flex flex-col print:max-w-full'>
                         <Header />
                         {children}
                     </div>
@@ -28,4 +28,3 @@ export default function RootLayout({
         </html>
     );
 }
-

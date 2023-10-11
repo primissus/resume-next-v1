@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { join } from 'path';
-import { getTranslatorFrom } from '@src/i18n';
+import { getTranslatorFrom } from '@lib/i18n';
 import { useLocale } from '@server/hooks/useLocale';
 
 const dictionariesDir = join(process.cwd(), 'src/dictionaries');

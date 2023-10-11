@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import GlitchImg from '@components/GlitchImg';
 import ImgProfile from '@assets/profile.png';
 import { useTranslator } from '@server/hooks/useTranslator';
-import { locales } from '@src/i18n';
+import { locales } from '@lib/i18n';
 import { provideLocale } from '@server/hooks/useLocale';
 import { LocaleComponentProps } from './types';
 import getRatioStyle from '@lib/getRatioStyle';
@@ -21,8 +21,8 @@ export default function Home({ params: { locale } }: LocaleComponentProps) {
                         <p className={clsx(styles.greetingText, 'text-[40px] w-[85vw] max-w-[800px]')}>{t('helloMessage')}</p>
                     </div>
                 </div>
-                <div className="max-w-[1000px] h-full overflow-hidden w-[70%]">
-                    <div className="h-full absolute bottom-0 left-0 md:left-[auto] max-h-[750px] md:max-h-max" style={{ aspectRatio: `${ratioStyle}`}}>
+                <div className="flex flex-row justify-end h-full overflow-hidden w-[70%]">
+                    <div className="h-full absolute bottom-0 left-0 sm:left-[auto] max-h-[750px] md:max-h-max" style={{ aspectRatio: `${ratioStyle}`}}>
                         <GlitchImg src={ImgProfile} className="w-full h-full" />
                     </div>
                 </div>
