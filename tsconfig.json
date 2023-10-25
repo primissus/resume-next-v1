@@ -57,14 +57,16 @@
     }
   },
   "types": [
-    "react/next"
+    "react/next",
+    "@testing-library/jest-dom"
   ],
   "include": [
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "docs/types/**/*.ts"
+    "docs/types/**/*.ts",
+    "./jest.setup.js"
   ],
   "exclude": [
     "node_modules"

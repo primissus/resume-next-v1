@@ -1,7 +1,7 @@
 import DisplayDate from '@components/DisplayDate';
 import { useTranslator } from '@server/hooks/useTranslator';
 
-interface DateRangeProps {
+export interface DateRangeProps {
     start?: string;
     end?: string;
     current?: boolean;
