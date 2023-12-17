@@ -2,7 +2,6 @@ import { once } from 'lodash';
 
 const ref = { current: undefined };
 
-console.log('mock server context')
 const setDefaultValue = once((value: any) => {
     ref.current = value;
 });

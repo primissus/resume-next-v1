@@ -1,8 +1,6 @@
 import { defaultLocale } from '@lib/i18n';
 import useServerContext from 'server-only-context';
 
-console.log('userServerContext', useServerContext);
-
 const [getLocale, setLocale] = useServerContext<string | undefined>(undefined);
 
 export function provideLocale(locale: string, override?: boolean) {

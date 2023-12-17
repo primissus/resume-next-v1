@@ -4,8 +4,8 @@ import { useEffect, useState } from 'react';
 import { useLocale } from './useLocale';
 
 const emptyTranslator: Translator = (key: string) => {
-  return key;
-}
+    return key;
+};
 
 export function useLazyTranslator() {
     const [translator, setTranslator] = useState<Translator>(emptyTranslator);
@@ -14,24 +14,24 @@ export function useLazyTranslator() {
     const locale = useLocale();
 
     useEffect(() => {
-      if (locale) {
-        loadTranslator()
-      }
+        if (locale) {
+            loadTranslator();
+        }
     }, [locale]);
 
     const loadTranslator = async () => {
         try {
-          setError(undefined);
-          setLoading(true);
-          const loadedTranslator = await getTranslator(locale);
-          
-          setTranslator(() => loadedTranslator);
+            setError(undefined);
+            setLoading(true);
+            const loadedTranslator = await getTranslator(locale);
+
+            setTranslator(() => loadedTranslator);
         } catch (error) {
-          setError(error)
+            setError(error);
         } finally {
-          setLoading(false);
+            setLoading(false);
         }
-    }
+    };
 
     return { t: translator, loading, error };
 }
