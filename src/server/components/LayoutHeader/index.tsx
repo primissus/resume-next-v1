@@ -1,6 +1,7 @@
 import { useTranslator } from '@server/hooks/useTranslator';
 import LocaleLink from '@server/components/LocaleLink';
 import { LanguagesDropdown } from '@components/LanguagesDropdown';
+import { NAV_ITEMS } from './constants';
 
 const NavItem = ({ children, href }: { children: string; href: string }) => (
     <li>
@@ -14,11 +15,13 @@ export default function LayoutHeader() {
     const t = useTranslator('home');
 
     return (
-        <nav className='print:hidden'>
+        <nav data-testid='root-layout-header-nav' className='print:hidden'>
             <ul className='flex flex-row items-center'>
-                <NavItem href='/'>{t('home')}</NavItem>
-                <NavItem href='about-this-page'>{t('about')}</NavItem>
-                <NavItem href='cv'>{t('cv')}</NavItem>
+                {NAV_ITEMS.map(({ href, labelKey }) => (
+                    <NavItem key={labelKey} href={href}>
+                        {t(labelKey)}
+                    </NavItem>
+                ))}
                 <div className='flex-grow' />
                 <li>
                     <LanguagesDropdown />

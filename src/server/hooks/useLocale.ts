@@ -1,7 +1,7 @@
-import { defaultLocale } from "@lib/i18n";
-import userServerContext from 'server-only-context'
+import { defaultLocale } from '@lib/i18n';
+import useServerContext from 'server-only-context';
 
-const [getLocale, setLocale] = userServerContext<string | undefined>(undefined);
+const [getLocale, setLocale] = useServerContext<string | undefined>(undefined);
 
 export function provideLocale(locale: string, override?: boolean) {
     const currentLocale = getLocale();
@@ -22,4 +22,3 @@ export function useLocaleRaw(): string | undefined {
 
     return currentLocale;
 }
-
